@@ -2,6 +2,7 @@
     background-color: $color-grey-light-1;
     grid-column: full-start / full-end;
 
+    //NOTE: example of grid gallery, 5vw has been experimented for a long time
     display: grid;
     /*grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(7, 5vw);*/

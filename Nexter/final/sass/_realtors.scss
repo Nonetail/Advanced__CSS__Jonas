@@ -3,6 +3,7 @@
     grid-column: col-start 7 / full-end;
     padding: 3rem;
 
+    //NOTE: example of subgrid
     display: grid;
     align-content: center;
     justify-content: center;
@@ -14,12 +15,15 @@
     }
 
     &__list {
+        //NOTE: example of subgrid
         display: grid;
+        //NOTE: 1st column for images, 2st one for the text
         grid-template-columns: min-content max-content;
         grid-column-gap: 2rem;
         grid-row-gap: 5vh;
         align-items: center;
 
+        //NOTE: example of create responsive columns
         @media only screen and (max-width: $bp-medium) {
             grid-template-columns: repeat(3, min-content max-content);
         }

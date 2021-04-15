@@ -1,9 +1,11 @@
+//NOTE: come back to this
 %heading {
     font-family: $font-display;
     font-weight: 400;
 }
 
 .heading-1 {
+    //NOTE: come back to this
     @extend %heading;
     font-size: 4.5rem;
     color: $color-grey-light-1;

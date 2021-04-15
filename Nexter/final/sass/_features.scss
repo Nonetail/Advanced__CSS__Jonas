@@ -6,7 +6,10 @@
     @supports(display: grid) {
         display: grid;
         //grid-template-columns: repeat(3, 1fr);
+        //NOTE: how to create responsive grid !!!
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        //NOTE: rows here is the same as writing nothing
+        // grid-template-rows: auto auto;
         grid-gap: 6rem;
         align-items: start;
     }
@@ -25,6 +28,7 @@
     }
 
     display: grid;
+    //NOTE: subgrid example
     grid-template-columns: min-content 1fr;
     grid-row-gap: 1.5rem;
     grid-column-gap: 2.5rem;
@@ -33,6 +37,8 @@
         fill: $color-primary;
         width: 4.5rem;
         height: 4.5rem;
+        //NOTE: -1 here represents explicit grid row ends
+        // grid-row: 1 / -1;
         grid-row: 1 / span 2;
         transform: translateY(-1rem);
     }

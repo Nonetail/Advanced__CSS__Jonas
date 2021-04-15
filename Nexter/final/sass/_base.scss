@@ -46,15 +46,21 @@ body {
 
 .container {
     display: grid;
+    // NOTE: min-content(auto by default is the same in this case) here can make row height dynamic 
+    // NOTE: 40vw here means the height is depends on the width of the view port
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
+    //TEST: move sidebar to the top
+    //NOTE: good thing about naming our grid lines here is because when the layout changed, we can still use our named gird lines to ref 
     @media only screen and (max-width: $bp-large) {
         grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     }
 
     @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 6rem calc(100vh - 6rem);
+        //NOTE: the automatic placement will take care of it, if we want our row height to be min-content
+        // grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content;
+       grid-template-rows: 6rem calc(100vh - 6rem);
     }
 }

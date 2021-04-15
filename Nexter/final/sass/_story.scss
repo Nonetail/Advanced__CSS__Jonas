@@ -6,8 +6,10 @@
         background-size: cover;
 
         display: grid;
+        //NOTE: 6 by 6 subgrid
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(6, 1fr);
+        //NOTE: image in the grid will not 100 fit in the grid items, but try to keep it's aspect ratio
         align-items: center;
 
         @media only screen and (max-width: $bp-medium) {
@@ -45,8 +47,10 @@
         background-color: $color-grey-light-1;
         grid-column: col-start 5 / full-end;
 
+        //NOTE: dynamic padding left right!
         padding: 6rem 8vw;
 
+        //NOTE: combine flex with grid
         /*
         display: flex;
         flex-direction: column;
@@ -54,6 +58,7 @@
         align-items: flex-start;
         */
 
+        //NOTE: center in grid
         display: grid;
         align-content: center;
         justify-items: start;
